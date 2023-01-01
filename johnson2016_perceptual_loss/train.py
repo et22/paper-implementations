@@ -47,8 +47,8 @@ def train(args):
     style_weight = 30
     content_weight = 5
     tv_weight = 1
-    display_iters = 5
-    save_epochs = 1
+    display_iters = 25
+    save_epochs = 2
     checkpoint_dir = "./models"
     save_dir = "./temp/"
     logging = 1
