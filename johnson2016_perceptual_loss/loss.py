@@ -4,14 +4,14 @@ from torchvision.models import vgg16, VGG16_Weights
 
 class PerceptualLoss(nn.Module):
     # referenced https://github.com/tyui592/Perceptual_loss_for_real_time_style_transfer
-    def __init__(self):
+    def __init__(self, style_weight, content_weight, tv_weight):
         super(PerceptualLoss, self).__init__()
         self.vgg16 = vgg16(weights = VGG16_Weights.IMAGENET1K_FEATURES).features
         self.style_layers = [3, 8, 15, 22]
         self.content_layers = [15]
-        self.tv_weight = 1
-        self.content_weight = 1
-        self.style_weight = 30
+        self.tv_weight = tv_weight
+        self.content_weight = content_weight
+        self.style_weight = style_weight
     
     def forward(self, output, style_target, content_target):
         loss = self.style_weight * self.style_loss(output, style_target) \

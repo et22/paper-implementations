@@ -23,7 +23,11 @@ class TrainOptions:
 
     def initialize(self):
         self.parser.add_argument('--data_path', type=str, default='./data/', help='Path to data directory with subdirectories training and validation')
-
+        self.parser.add_argument('--checkpoint_optim_path', type=str, default=None, help='Path to optimizer checkpoint if resuming training')
+        self.parser.add_argument('--checkpoint_net_path', type=str, default=None, help='Path to model checkpoint if resuming training')
+        self.parser.add_argument('--resume_training', dest='resume_training', action='store_true', help='Whether to resume training from checkpoint')
+        self.parser.add_argument('--no-resume_training', dest='resume_training', action='store_false', help='Whether to resume training from checkpoint')
+        self.parser.set_defaults(resume_training=False)
     def parse(self):
         opts = self.parser.parse_args()
         return opts
@@ -40,6 +44,9 @@ def train(args):
     num_epochs = 5
     style_img = "./style/picasso_studio_with_plaster_head.jpeg"
     style_label = ""
+    style_weight = 20
+    content_weight = 10
+    tv_weight = 1
     display_iters = 5
     save_epochs = 1
     checkpoint_dir = "./models"
@@ -59,11 +66,16 @@ def train(args):
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True, num_workers=workers)
 
     net = ImageTNet().to(device)
-    criterion = PerceptualLoss().to(device)
+    criterion = PerceptualLoss(style_weight, content_weight, tv_weight).to(device)
 
     optimizer = torch.optim.Adam(net.parameters(), lr=lr)
 
     style_target = transform(Image.open(style_img)).to(device)[None, :, :, :]
+
+    # if resume from checkpoint, load model and optimizer state dicts from checkpoint
+    if args.resume_training:
+        net.load_state_dict(torch.load(args.checkpoint_net_path))
+        optimizer.load_state_dict(torch.load(args.checkpoint_optim_path))
 
     print("Starting Training Loop...")
     for epoch in range(num_epochs):
