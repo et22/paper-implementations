@@ -11,13 +11,29 @@ from model import ImageTNet
 from loss import PerceptualLoss
 from dataset import StyleDataset
 from multiprocessing import freeze_support
+from argparse import ArgumentParser
 
-def train():
+class TrainOptions:
+    """
+    TrainOptions defines arguments for train.py. 
+    """
+    def __init__(self):
+        self.parser = ArgumentParser()
+        self.initialize()
+
+    def initialize(self):
+        self.parser.add_argument('--data_path', type=str, default='./data/', help='Path to data directory with subdirectories training and validation')
+
+    def parse(self):
+        opts = self.parser.parse_args()
+        return opts
+
+def train(args):
     device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")
 
     #### parameters ####
     lr = .001
-    data_dir = "./data/"
+    data_dir = args.data_path
     image_size = 256
     workers = 8
     batch_size = 16
@@ -90,4 +106,5 @@ def train():
 
 if __name__ == '__main__':
     freeze_support()
-    train()
+    args = TrainOptions().parse()
+    train(args)
