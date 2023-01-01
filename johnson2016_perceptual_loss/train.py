@@ -103,7 +103,7 @@ def train(args):
                         if not os.path.exists(save_dir):
                             os.makedirs(save_dir)
                         vutils.save_image(output.add(1).mul(0.5),  save_dir + 'out_%d.jpg'%i, nrow=4)
-                        vutils.save_image(data.add(1).mul(0.5).mul(0.5), save_dir +'dat_%d.jpg'%i, nrow=4)
+                        vutils.save_image(data.add(1).mul(0.5), save_dir +'dat_%d.jpg'%i, nrow=4)
 
             # Save checkpoint every save_epochs epochs
             if (epoch % save_epochs == 0):
