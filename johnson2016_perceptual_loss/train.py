@@ -41,11 +41,11 @@ def train(args):
     image_size = 256
     workers = 8
     batch_size = 16
-    num_epochs = 5
+    num_epochs = 25
     style_img = "./style/picasso_studio_with_plaster_head.jpeg"
     style_label = ""
-    style_weight = 20
-    content_weight = 10
+    style_weight = 30
+    content_weight = 5
     tv_weight = 1
     display_iters = 5
     save_epochs = 1
