@@ -44,7 +44,7 @@ def train(args):
     save_epochs = 1
     checkpoint_dir = "./models"
     save_dir = "./temp/"
-    logging = 0
+    logging = 1
     ####################
     if logging:
         wandb.init(project='papertest', entity='et22', name="test1", settings=wandb.Settings(start_method="fork"))
