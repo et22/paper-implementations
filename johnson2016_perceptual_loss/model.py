@@ -16,6 +16,7 @@ class ImageTNet(nn.Module):
         up1 = ImageTNet._conv(nn.ConvTranspose2d(in_channels=128, out_channels=64, kernel_size=3, stride=2, padding=1, output_padding=1))
         up2 = ImageTNet._conv(nn.ConvTranspose2d(in_channels=64, out_channels=32, kernel_size=3, stride=2, padding=1, output_padding=1))
         conv2 = nn.Conv2d(in_channels=32, out_channels=3, kernel_size=9, stride=1, padding = 4)
+        bn = nn.BatchNorm2d(3)
         tanh = nn.Tanh()
         
         self.model = nn.Sequential(
@@ -31,6 +32,7 @@ class ImageTNet(nn.Module):
             up1,
             up2,
             conv2,
+            bn,
             tanh,
         )
 
