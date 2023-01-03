@@ -16,7 +16,7 @@ The model was trained to reproduce the style of *Starry Night* by Vincent van Go
 ![Bixby bridge in the style of Starry Night](./results/bridge_out.jpg)
 
 
-*Bixby bridge in the style of starry night*
+*Bixby bridge in the style of Starry Night*
 
 
 
