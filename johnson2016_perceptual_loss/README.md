@@ -6,14 +6,14 @@ This repo contains an unoffical Pytorch implementation of the style transfer mod
 The model was trained to reproduce the style of *Starry Night* by Vincent van Gogh. Here, we include 3 example outputs of the model with input from my camera roll. 
 
 ![My cat](./results/blaze_input.jpg)
-![My cat in the style of starry night](./results/blaze_out.jpg)
+![My cat in the style of Starry Night](./results/blaze_out.jpg)
 
 
 *My cat in the style of Starry Night*
 
 
 ![Bixby bridge](./results/bridge_input.jpg)
-![Bixby bridge in the style of starry night](./results/bridge_out.jpg)
+![Bixby bridge in the style of Starry Night](./results/bridge_out.jpg)
 
 
 *Bixby bridge in the style of starry night*
