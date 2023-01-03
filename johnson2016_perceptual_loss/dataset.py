@@ -1,4 +1,5 @@
 import glob
+import os
 
 from os.path import join
 from torch.utils.data import Dataset
@@ -43,4 +44,8 @@ class StyleDataset(Dataset):
         helper function to aggregate image files
         """
         files = sorted(glob.glob(self.path + "*"))
-        return files
+        all_files = []
+        for file in files:
+            if os.path.isfile(file):
+                all_files.append(file)
+        return all_files
