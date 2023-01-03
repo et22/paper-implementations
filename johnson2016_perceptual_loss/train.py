@@ -36,6 +36,7 @@ class TrainOptions:
         self.parser.add_argument('--checkpoint_dir', type=str, default="./", help='Where to log checkpoints')
         self.parser.add_argument('--dl_workers', type=int, default=2, help='Number of dataloader workers')
         self.parser.add_argument('--save_epochs', type=int, default=2, help='How often to save checkpoints')
+        self.parser.add_argument('--style_weight', type=int, default=15, help='Weight of style in loss function')
     def parse(self):
         opts = self.parser.parse_args()
         return opts
@@ -52,7 +53,7 @@ def train(args):
     num_epochs = args.num_epochs
     style_img = args.style_image_path
     style_label = ""
-    style_weight = 5
+    style_weight = args.style_weight
     content_weight = 1
     tv_weight = .1
     display_iters = args.log_iters
