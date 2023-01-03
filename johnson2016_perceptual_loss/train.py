@@ -72,7 +72,7 @@ def train(args):
                             ])
 
     dataset = StyleDataset(path=data_dir, transforms=transform)
-    dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True, num_workers=workers)
+    dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True, num_workers=workers, drop_last=True)
 
     net = ImageTNet().to(device)
     criterion = PerceptualLoss(style_weight, content_weight, tv_weight).to(device)
@@ -92,6 +92,16 @@ def train(args):
 
     print("Starting Training Loop...")
     for epoch in range(num_epochs):
+        # Save checkpoint every save_epochs epochs
+        if (epoch % save_epochs == 0):
+            with torch.no_grad():
+                if not os.path.exists(checkpoint_dir):
+                    os.makedirs(checkpoint_dir)
+
+                # save optimizers
+                torch.save(net.state_dict(),os.path.join(checkpoint_dir, f"net_{style_label}_{epoch}.pt"))
+                torch.save(optimizer.state_dict(), os.path.join(checkpoint_dir, f"opt_{style_label}_{epoch}.pt"))
+
         for i, data in enumerate(dataloader):
             net.zero_grad()
             output = net(data.to(device))
@@ -118,15 +128,6 @@ def train(args):
                         vutils.save_image(output.add(1).mul(0.5),  save_dir + 'out_%d.jpg'%i, nrow=4)
                         vutils.save_image(data.add(1).mul(0.5), save_dir +'dat_%d.jpg'%i, nrow=4)
 
-            # Save checkpoint every save_epochs epochs
-            if (epoch % save_epochs == 0):
-                with torch.no_grad():
-                    if not os.path.exists(checkpoint_dir):
-                        os.makedirs(checkpoint_dir)
-
-                    # save optimizers
-                    torch.save(net.state_dict(),os.path.join(checkpoint_dir, f"net_{style_label}_{epoch}.pt"))
-                    torch.save(optimizer.state_dict(), os.path.join(checkpoint_dir, f"opt_{style_label}_{epoch}.pt"))
 
 
 if __name__ == '__main__':
