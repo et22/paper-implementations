@@ -55,7 +55,7 @@ def train(args):
     style_label = ""
     style_weight = args.style_weight
     content_weight = 1
-    tv_weight = .5
+    tv_weight = .1
     display_iters = args.log_iters
     save_epochs = args.save_epochs
     checkpoint_dir = args.checkpoint_dir
