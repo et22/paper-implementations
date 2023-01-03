@@ -6,7 +6,7 @@ class PerceptualLoss(nn.Module):
     # referenced https://github.com/tyui592/Perceptual_loss_for_real_time_style_transfer
     def __init__(self, style_weight, content_weight, tv_weight):
         super(PerceptualLoss, self).__init__()
-        self.vgg16 = vgg16(pretrained=True) #vgg16(weights = VGG16_Weights.IMAGENET1K_V1).features
+        self.vgg16 = vgg16(pretrained=True).features #vgg16(weights = VGG16_Weights.IMAGENET1K_V1).features
         print(self.vgg16)
         self.style_layers = [3, 8, 15, 22]
         self.content_layers = [15]
