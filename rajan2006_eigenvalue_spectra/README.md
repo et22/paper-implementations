@@ -12,7 +12,7 @@ Rajan and Abbot extend Girko's circle law to synaptic connectivity matrices for 
 *Figure 1.* Distribution of eigenvalues for random connectivity matrices with different mean synaptic weights for excitatory and inhibitory neurons but the same variance (left). Same as left panel but with the additional constraint that excitatory and inhibitory inputs to each neuron are balanced (i.e., rows in the connectivity matrix sum to zero).
 
 ![Eigenvalue density with different variance](https://github.com/et22/paper-implementations/blob/main/rajan2006_eigenvalue_spectra/figure2.png)
-*Figure 2.* Distribution of eigenvalues for random connectivity matrices with different variances for excitatory and inhibitory synaptic weights. Eigenvalue density ($\rho$) is plotted as a function of distance from the origin $|\omega|$ for simulations with different fractions of excitatory neurons $f$ (left). Eigenvalue density as a function of distance for different excitatory synaptic weight variances ($\frac{1}{N*\alpha}$). 
+*Figure 2.* Distribution of eigenvalues for random connectivity matrices with different variances for excitatory and inhibitory synaptic weights. Eigenvalue density ($\rho$) is plotted as a function of distance from the origin $|\omega|$ for simulations with different fractions of excitatory neurons $f$ (left). Eigenvalue density as a function of distance for different excitatory synaptic weight variances ($\frac{1}{N\alpha}$). 
 
 ### Reproducing the results 
 Results can be reproduced by running the Jupyter notebook `eigenvalue_spectra.ipynb`. Simulation parameters are enumerated in the notebook and were selected to match the original paper as closely as possible. 
