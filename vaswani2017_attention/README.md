@@ -9,6 +9,7 @@ In `transformer.py`, I implemented each component of the transformer, including 
 In `test_transformer.ipynb`, I test each component of the transformer that I implemented against the corresponding built in PyTorch functions, and plot the positional encoding as a sanity check. The outputs of my implementation and the PyTorch functions match, suggesting the implementation is correct. 
 
 The plot of the positional encoding is shown below: 
+
 ![Positional encoding](./pos_encoding.png)
 *Positional encoding*
 
