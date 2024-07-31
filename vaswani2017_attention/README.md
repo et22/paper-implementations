@@ -11,11 +11,13 @@ In `test_transformer.ipynb`, I test each component of the transformer that I imp
 The plot of the positional encoding is shown below: 
 
 ![Positional encoding](./pos_encoding.png)
+
 *Positional encoding*
 
 In `translation.ipynb`, I substitute my implementation of the transformer architecture for the built in PyTorch function in a PyTorch transformer tutorial, and demonstrate that it can be succesfully used for translating German words to English after training for a few epochs on the Multi30K dataset.
 
 ![Sentence translations](./example_translations.png)
+
 *Examples translations output by trained model.*
 
 ### Acknowledgements
