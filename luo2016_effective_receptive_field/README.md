@@ -9,7 +9,10 @@ Luo and colleagues examine the effective receptive field (ERF) - the region of s
 
 *Figure 1.* Effective receptive fields (ERFs) for linear CNNs with uniform weights, linear CNNs with random weights, CNNs with random weights and ReLU activation function. ERFs are shown for four networks with 5, 10, 20, and 40 layers. 
 
+<p align="center">
 <img src="https://github.com/et22/paper-implementations/blob/main/luo2016_effective_receptive_field/figures/figure2.png" alt="figure2" width="200"/>
+</p>
+
 *Figure 2.* ERFs for layer3.0.conv1 in a ResNet18 model with randomly initialized weights (left) or pretrained on object classification (right). 
 
 ![Figure 3](https://github.com/et22/paper-implementations/blob/main/luo2016_effective_receptive_field/figures/figure3.png)
