@@ -16,7 +16,9 @@ The plot of the positional encoding is shown below:
 
 In `translation.ipynb`, I substitute my implementation of the transformer architecture for the built in PyTorch function in a PyTorch transformer tutorial, and demonstrate that it can be succesfully used for translating German words to English after training for a few epochs on the Multi30K dataset.
 
-![Sentence translations](./example_translations.png)
+<p align="center">
+<img src="./example_translations.png" alt="Sentence translations" width="500"/>
+</p>
 
 *Examples translations output by trained model.*
 
