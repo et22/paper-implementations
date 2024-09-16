@@ -10,7 +10,10 @@ In `test_transformer.ipynb`, I test each component of the transformer that I imp
 
 The plot of the positional encoding is shown below: 
 
-![Positional encoding](./pos_encoding.png)
+<p align="center">
+<img src="./pos_encoding.png" alt="Positional encoding" width="500"/>
+</p>
+
 
 *Positional encoding*
 
