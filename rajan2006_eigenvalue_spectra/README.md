@@ -9,13 +9,13 @@ Girko's circle law, a key result in random matrix theory, states that the eigenv
 Rajan and Abbot extend Girko's circle law to synaptic connectivity matrices for biological neural networks. These matrices have entries that are drawn not from the standard normal distribution but from one of two normal distributions with different means and variances (corresponding to excitatory and inhibitory neurons). If matrix entries are drawn from two distributions with different means but the same variance, the eigenvalues of the matrix are uniformly distributed on the unit disk with a few outliers outside the unit disk (**Figure 1, left**). These outliers can be eliminated by imposing the constraint that the sum of the synaptic inputs to each neuron is zero (**Figure 1, right**).  If matrix entries are instead drawn from two distributions with different variances, the distribution of eigenvalues concentrates towards the center of the unit disk (**Figure 2, inset**).
 
 <p align="center">
-<img src="./https://github.com/et22/paper-implementations/blob/main/rajan2006_eigenvalue_spectra/figure1.png" alt="Eigenvalue distribution with matched variance" width="900"/>
+<img src="https://github.com/et22/paper-implementations/blob/main/rajan2006_eigenvalue_spectra/figure1.png" alt="Eigenvalue distribution with matched variance" width="900"/>
 </p>
 
 *Figure 1.* Distribution of eigenvalues for random connectivity matrices with different mean synaptic weights for excitatory and inhibitory neurons but the same variance (left). Same as left panel but with the additional constraint that excitatory and inhibitory inputs to each neuron are balanced (i.e., rows in the connectivity matrix sum to zero).
 
 <p align="center">
-<img src="./https://github.com/et22/paper-implementations/blob/main/rajan2006_eigenvalue_spectra/figure2.png" alt="Eigenvalue density with different variance" width="900"/>
+<img src="https://github.com/et22/paper-implementations/blob/main/rajan2006_eigenvalue_spectra/figure2.png" alt="Eigenvalue density with different variance" width="900"/>
 </p>
 
 *Figure 2.* Distribution of eigenvalues for random connectivity matrices with different variances for excitatory and inhibitory synaptic weights. Eigenvalue density ($\rho$) is plotted as a function of distance from the origin $|\omega|$ for simulations with different fractions of excitatory neurons $f$ (left). Eigenvalue density as a function of distance for different excitatory synaptic weight variances ($\frac{1}{N\alpha}$). 
