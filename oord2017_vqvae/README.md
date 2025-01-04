@@ -10,10 +10,12 @@ The model was trained on the CIFAR-10 dataset. Below are example outputs showing
 
 #### Reconstructed Images
 ![Reconstructed Images](./reconstructed.png)
+
 *Reconstructed images from the CIFAR-10 dataset using the VQ-VAE.*
 
 #### Generated Images
 ![Generated Images](./generated.png)
+
 *Generated images from the CIFAR-10 dataset using a PixelCNN prior with the VQ-VAE.*
 
 ### Running the Code
