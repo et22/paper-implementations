@@ -2,6 +2,7 @@ import numpy as np
 from utils import *
 from td_lambda import *
 from random_walk import *
+from random_maze import *
 
 def run_figure3_experiments(training_sets, labels, save_name):
     lambdas = list(np.linspace(0, 1, 21))
@@ -101,9 +102,32 @@ def summarize_num_samples_experiments():
         opt_lambdas.append(opt_lambda)
     plot_xy_figure(sample_list, opt_lambdas, "Number of sequences", "Optimal $\lambda$ with best $\\alpha$", save_name="figure5_nsamples_summary")
 
+def run_maze_experiments():
+    for max_depth in [1,2,3]:
+        n_samples = 10
+        n_states = np.sum([2 ** i for i in range(max_depth+1)]) - 1
+
+        training_sets = sample_maze_training_sets(n_sets=100, n_samples=n_samples, max_depth=max_depth)
+        labels = random_maze_labels(max_depth=max_depth)
+
+        run_figure4_experiments(training_sets, labels, save_name=f"figure4_maze_depth={max_depth}_samples={n_samples}", n_states=n_states)
+        run_figure5_experiments(training_sets, labels, save_name=f"figure5_maze_depth={max_depth}_samples={n_samples}", n_states=n_states)
+
+    for n_samples in [3, 3 ** 2, 3 ** 3, 3 ** 4]:
+        max_depth = 2
+        n_states = np.sum([2 ** i for i in range(max_depth+1)]) - 1
+
+        training_sets = sample_maze_training_sets(n_sets=100, n_samples=n_samples, max_depth=max_depth)
+        labels = random_maze_labels(max_depth=max_depth)
+
+        run_figure4_experiments(training_sets, labels, save_name=f"figure4_maze_depth={max_depth}_samples={n_samples}", n_states=n_states)
+        run_figure5_experiments(training_sets, labels, save_name=f"figure5_maze_depth={max_depth}_samples={n_samples}", n_states=n_states)
+
 if __name__ == '__main__':
     #run_main_experiments()
     #run_num_state_experiments()
     #run_num_samples_experiments()
-    summarize_num_samples_experiments()
+    #summarize_num_samples_experiments()
+    run_maze_experiments()
+    pass
 
