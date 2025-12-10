@@ -5,7 +5,7 @@ This repo contains an unoffical Python implementation of some of the results fro
 
 ### Results
 <p align="center">
-<img src="https://github.com/et22/paper-implementations/blob/main/schlag2021_linear_transformers/figure2.png" alt="Loss of different attention mechanisms." width="900"/>
+<img src="https://github.com/et22/paper-implementations/blob/main/schlag2021_linear_transformers/figures/figure2.png" alt="Loss of different attention mechanisms." width="900"/>
 </p>
 
 *Figure 1.* Loss of softmax attention and various linear attention mechanisms on a toy associative retrieval task.
