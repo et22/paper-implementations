@@ -5,7 +5,7 @@ This repo contains an unoffical Python implementation of the simple gradient-bas
 
 ### Results
 <p align="center">
-<img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_opticalflowestimation/outputs/out.gif" alt="Optic flow computed for translating squares." width="300"/>
+<img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_opticalflowestimation/outputs/out.gif" alt="Optic flow computed for translating squares." width="200"/>
 </p>
 
 *Figure 1.* Translating squares stimulus for computing optic flow. 
