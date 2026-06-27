@@ -8,7 +8,7 @@ I first constructed block world and took a photo from a large distance with zoom
 
 <table align="center">
 <tr>
-<td align="center" bgcolor="white" ]>
+<td align="center" bgcolor="white">
 <img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_simplevisionsystem/outputs/blockworld.jpeg" alt="My block world." width="300"/><br>
 <i>Figure 1 (left).</i> My block world.
 </td>
@@ -60,21 +60,22 @@ I then segmented faces (**Figure 3, left**) and labeled each face as 'horizontal
 </table>
 
 
-I then constructed the constraint matrix based on the seven edge, face, and figure-ground constraints enumerated in the comments in the code. The recovered 3D structure is visualized in depth maps (**Figure 4, top**) and rendered from different viewpoints below(**Figure 34 bottom**).
+I then constructed the constraint matrix based on the seven edge, face, and figure-ground constraints enumerated in the comments in the code. The recovered 3D structure is rendered from different viewpoints below(**Figure 34 bottom**) and visualized in heat maps (**Figure 4, bottom**).
 
 <table align="center">
 <tr>
 <td align="center" bgcolor="white">
-<img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_simplevisionsystem/outputs/worldcoords.jpeg" alt="Recovered 3D structure in world coordinates." width="450"/><br>
-<i>Figure 4 (top).</i> Recovered 3D structure in depth maps.
+<img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_simplevisionsystem/outputs/render3d.jpeg" alt="Rendered 3D reconstruction." width="450"/><br>
+<i>Figure 4 (top).</i> Rendered 3D reconstruction.
 </td>
 </tr>
 <tr>
 <td align="center" bgcolor="white">
-<img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_simplevisionsystem/outputs/render3d.jpeg" alt="Rendered 3D reconstruction." width="450"/><br>
-<i>Figure 4 (bottom).</i> Rendered 3D reconstruction.
+<img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_simplevisionsystem/outputs/worldcoords.jpeg" alt="Recovered 3D structure in world coordinates." width="450"/><br>
+<i>Figure 4 (bottom).</i> Recovered 3D structure in heat maps.
 </td>
 </tr>
+
 </table>
 
 
