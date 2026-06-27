@@ -1,4 +1,4 @@
-# Torralba et al. 2024 Foundations of Computer Vision Chapter 48 - Optical Flow Estimation
+# Torralba et al. 2024 Foundations of Computer Vision Chapter 2 - A Simple Vision System
 
 ### Overview
 This repo contains an unoffical Python implementation of a simple image to 3D reconstruction algorithm for block world inspired by Chapter 2 of [*Foundations of Computer Vision*](https://visionbook.mit.edu/simplesystem.html) by Antonio Torralba, Phillip Isola, and William Freeman. The implementation currently relies on face segmentation and additional face-based constraints rather than strictly following the method in the book, and the resulting reconstructions are still not quite right.
