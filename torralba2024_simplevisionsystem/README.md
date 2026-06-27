@@ -8,11 +8,11 @@ I first constructed block world and took a photo from a large distance with zoom
 
 <table align="center">
 <tr>
-<td align="center">
-<img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_simplevisionsystem/outputs/blockworld.jpeg" alt="My block world." width="200"/><br>
+<td align="center" bgcolor="white" ]>
+<img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_simplevisionsystem/outputs/blockworld.jpeg" alt="My block world." width="300"/><br>
 <i>Figure 1 (left).</i> My block world.
 </td>
-<td align="center">
+<td align="center" bgcolor="white">
 <img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_simplevisionsystem/outputs/blockworld_downloaded.jpeg" alt="Block world from chapter 2." width="300"/><br>
 <i>Figure 1 (right).</i> Block world from chapter 2.
 </td>
@@ -23,21 +23,21 @@ I next identified edges and the associated gradient orientation and magnitude at
 
 <table align="center">
 <tr>
-<td align="center">
+<td align="center" bgcolor="white">
 <img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_simplevisionsystem/outputs/edges.jpeg" alt="Map of edges detected with image gradient." width="300"/><br>
 <i>Figure 2 (top left).</i> Map of edges detected with image gradient.
 </td>
-<td align="center">
-<img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_opticalflowestimation/outputs/gradmag.jpeg" alt="Map of gradient orientation and magnitude along edges." width="300"/><br>
+<td align="center" bgcolor="white">
+<img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_simplevisionsystem/outputs/gradmag.jpeg" alt="Map of gradient orientation and magnitude along edges." width="300"/><br>
 <i>Figure 2 (top right).</i> Map of gradient orientation and magnitude along edges.
 </td>
 </tr>
 <tr>
-<td align="center">
+<td align="center" bgcolor="white">
 <img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_simplevisionsystem/outputs/figureground.jpeg" alt="Figure-ground relationships." width="300"/><br>
 <i>Figure 2 (bottom left).</i> Estimated figure-ground relationships.
 </td>
-<td align="center">
+<td align="center" bgcolor="white">
 <img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_simplevisionsystem/outputs/edgesclassified.jpeg" alt="Classified edges." width="300"/><br>
 <i>Figure 2 (bottom right).</i> Classified edges.
 </td>
@@ -48,11 +48,11 @@ I then segmented faces (**Figure 3, left**) and labeled each face as 'horizontal
 
 <table align="center">
 <tr>
-<td align="center">
+<td align="center" bgcolor="white">
 <img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_simplevisionsystem/outputs/faces.jpeg" alt="Detected planar faces." width="300"/><br>
 <i>Figure 3 (left).</i> Detected planar faces.
 </td>
-<td align="center">
+<td align="center" bgcolor="white">
 <img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_simplevisionsystem/outputs/labeledfaces.jpeg" alt="Labeled planar faces." width="300"/><br>
 <i>Figure 3 (right).</i> Labeled planar faces.
 </td>
@@ -64,13 +64,13 @@ I then constructed the constraint matrix based on the seven edge, face, and figu
 
 <table align="center">
 <tr>
-<td align="center">
+<td align="center" bgcolor="white">
 <img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_simplevisionsystem/outputs/worldcoords.jpeg" alt="Recovered 3D structure in world coordinates." width="450"/><br>
 <i>Figure 4 (top).</i> Recovered 3D structure in depth maps.
 </td>
 </tr>
 <tr>
-<td align="center">
+<td align="center" bgcolor="white">
 <img src="https://github.com/et22/paper-implementations/blob/main/torralba2024_simplevisionsystem/outputs/render3d.jpeg" alt="Rendered 3D reconstruction." width="450"/><br>
 <i>Figure 4 (bottom).</i> Rendered 3D reconstruction.
 </td>
