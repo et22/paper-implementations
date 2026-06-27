@@ -60,7 +60,7 @@ I then segmented faces (**Figure 3, left**) and labeled each face as 'horizontal
 </table>
 
 
-I then constructed the constraint matrix based on the seven edge, face, and figure-ground constraints enumerated in the comments in the code. The recovered 3D structure is rendered from different viewpoints below(**Figure 34 bottom**) and visualized in heat maps (**Figure 4, bottom**).
+I then constructed the constraint matrix based on the seven edge, face, and figure-ground constraints enumerated in the comments in the code. The recovered 3D structure is rendered from different viewpoints below(**Figure 4, bottom**) and visualized in heat maps (**Figure 4, bottom**).
 
 <table align="center">
 <tr>
