@@ -1,7 +1,7 @@
 # Torralba et al. 2024 Foundations of Computer Vision Chapter 48 - Optical Flow Estimation
 
 ### Overview
-This repo contains an unoffical Python implementation of a simple image to 3D reconstruction algorithm for block world inspired by Chapter 2 of [*Foundations of Computer Vision*](https://visionbook.mit.edu/simplesystem.html) by Antonio Torralba, Phillip Isola, and William Freeman. The current implementation differs from the method in the book and is a little hacky because it includes face segmentation and adds constraints based on segmented faces, and the reconstructions are still not quite right. 
+This repo contains an unoffical Python implementation of a simple image to 3D reconstruction algorithm for block world inspired by Chapter 2 of [*Foundations of Computer Vision*](https://visionbook.mit.edu/simplesystem.html) by Antonio Torralba, Phillip Isola, and William Freeman. The implementation currently relies on face segmentation and additional face-based constraints rather than strictly following the method in the book, and the resulting reconstructions are still not quite right.
 
 ### Results
 I first constructed block world and took a photo from a large distance with zoom to obtain an image that can be described by parallel projection (**Figure 1, left**). However, some of the blocks in my block world were poorly constructed and lacked the well-defined edges important for the algorithm to work properly, so I relied on the block world image from chapter 2 instead (**Figure 1, right**).
